@@ -1,0 +1,57 @@
+﻿<Window x:Class="Sign_Up_Form.SalesWindow"
+        xmlns="http://schemas.microsoft.com/winfx/2006/xaml/presentation"
+        xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml"
+        xmlns:d="http://schemas.microsoft.com/expression/blend/2008"
+        xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006"
+        xmlns:materialDesign="http://materialdesigninxaml.net/winfx/xaml/themes"
+        xmlns:local="clr-namespace:Sign_Up_Form"
+        mc:Ignorable="d"
+        Title="SalesWindow" Height="450" Width="800"
+        WindowStartupLocation="CenterScreen" WindowStyle="None" AllowsTransparency="True">
+    <Grid>
+
+        <Grid.ColumnDefinitions>
+            <ColumnDefinition/>
+            <ColumnDefinition/>
+            <ColumnDefinition/>
+        </Grid.ColumnDefinitions>
+
+        <Grid.RowDefinitions>
+            <RowDefinition/>
+            <RowDefinition Height="300"/>
+            <RowDefinition/>
+        </Grid.RowDefinitions>
+
+        <Border Grid.ColumnSpan="3" Background="#FF00062D"></Border>
+        <Label Grid.Row="0" Grid.Column="1" FontFamily="Century Gothic" Content="Выберете билеты" HorizontalAlignment="Center" VerticalAlignment="Center" FontSize="25" FontWeight="Light" Foreground="#ffffff" ></Label>
+
+        <StackPanel Grid.Row="1" Grid.Column="0">
+            <Image Grid.Column="0" Source="/Resources/TheHattersBand.png" Margin="30,10,32,6"/>
+            <Label Content="Концерт The Hatters в Краснодаре" HorizontalAlignment="Center" FontFamily="Century Gothic" FontSize="13"/>
+            <Button Content ="Купить" materialDesign:ButtonAssist.CornerRadius="22" Width="150" Background="#FF011030" Foreground="#ffffff" FontFamily="Century Gothic" Click="Button_Click"></Button>
+        </StackPanel>
+
+        <StackPanel Grid.Row="1" Grid.Column="1">
+            <Image Grid.Column="0" Source="/Resources/TheHattersBand.png" Margin="30,10,32,6"/>
+            <Label Content="Концерт The Hatters в Сочи" HorizontalAlignment="Center" FontFamily="Century Gothic" FontSize="13"/>
+            <Button Content ="Купить" materialDesign:ButtonAssist.CornerRadius="22" Width="150" Background="#FF011030" Foreground="#ffffff" FontFamily="Century Gothic" Click="Button_Click"></Button>
+        </StackPanel>
+
+        <StackPanel Grid.Row="1" Grid.Column="2">
+            <Image Grid.Column="0" Source="/Resources/TheHattersBand.png" Margin="30,10,32,6"/>
+            <Label Content="Концерт The Hatters в Москве" HorizontalAlignment="Center" FontFamily="Century Gothic" FontSize="13"/>
+            <Button Content ="Купить" materialDesign:ButtonAssist.CornerRadius="22" Width="150" Background="#FF011030" Foreground="#ffffff" FontFamily="Century Gothic" Click="Button_Click"></Button>
+        </StackPanel>
+
+        <Button Grid.Column="0" Grid.Row="2" Width="150" Content="LogIn" materialDesign:ButtonAssist.CornerRadius="22"  Style="{StaticResource MaterialDesignFlatButton}" Foreground="#FFEA4949" Click="LogButton_Click"></Button>
+        <Button Grid.Column="1" Grid.Row="2" Width="150" Content="Выход" materialDesign:ButtonAssist.CornerRadius="22"  Style="{StaticResource MaterialDesignFlatButton}" Foreground="#FFEA4949" Click="EXTButton_Click"></Button>
+        <Button Grid.Column="2" Grid.Row="2" Width="150" Content="SignUp" materialDesign:ButtonAssist.CornerRadius="22"  Style="{StaticResource MaterialDesignFlatButton}" Foreground="#FFEA4949" Click="SignButton_Click"></Button>
+
+        <Label Grid.Column="0" Grid.Row="2" Content="(Покупка билетов не реализована полностью)" FontFamily="Century Gothic" FontSize="11" ></Label>
+        <Label Grid.Column="1" Grid.Row="2" Content="(Покупка билетов не реализована полностью)" FontFamily="Century Gothic" FontSize="11"></Label>
+        <Label Grid.Column="2" Grid.Row="2" Content="(Покупка билетов не реализована полностью)" FontFamily="Century Gothic" FontSize="11"></Label>
+        
+        <Frame NavigationUIVisibility="Hidden" Grid.Column="1" x:Name="LogSingFrame">
+        </Frame>
+    </Grid>
+</Window>
